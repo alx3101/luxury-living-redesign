@@ -69,7 +69,7 @@ export default function ContactPage() {
                   { icon: MapPin, label: "Indirizzo", value: "Viale Venezia 1/G – 33054\nLignano Sabbiadoro (UD)" },
                   { icon: Phone, label: "Telefono", value: "327.661.7744" },
                   { icon: Mail, label: "Email", value: "info@sanmarcorealestate.com" },
-                  { icon: Clock, label: "Orari", value: "Lun–Ven: 9:00 – 18:00\nSab: 9:00 – 13:00" },
+                  { icon: Clock, label: "Orari", value: "Lun–Ven: 08–12, 14–18\nSab: Chiuso" },
                 ].map((item) => (
                   <div key={item.label} className="flex items-start gap-5 group">
                     <div className="w-12 h-12 border border-gold/30 flex items-center justify-center shrink-0 group-hover:bg-gold/5 transition-colors">

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Bed, Bath, Maximize, Car } from "lucide-react";
+import { Bed, Bath, Maximize, Car, MapPin } from "lucide-react";
 import type { Property } from "@/data/properties";
 
 interface Props {
@@ -15,11 +15,13 @@ export default function PropertyCard({ property, index = 0 }: Props) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.6, delay: index * 0.1, ease: [0.16, 1, 0.3, 1] }}
+      className="flex flex-col"
     >
       <Link
         to={`/immobile/${property.slug}`}
-        className="group block bg-card rounded-sm overflow-hidden luxury-shadow hover:shadow-2xl transition-shadow duration-500"
+        className="group flex flex-col bg-card rounded-sm overflow-hidden luxury-shadow hover:shadow-2xl transition-shadow duration-500 h-full"
       >
+        {/* Image - fixed aspect ratio */}
         <div className="relative overflow-hidden aspect-[4/3]">
           <img
             src={property.image}
@@ -37,18 +39,23 @@ export default function PropertyCard({ property, index = 0 }: Props) {
           </div>
         </div>
 
-        <div className="p-5">
+        {/* Content - flex grow for equal height */}
+        <div className="p-5 flex flex-col flex-1">
           <p className="text-xs uppercase tracking-wider text-gold font-body mb-1">
             {property.type} · {property.category}
           </p>
-          <h3 className="font-display text-lg font-semibold text-foreground mb-2 group-hover:text-gold transition-colors duration-300">
+          <h3 className="font-display text-lg font-semibold text-foreground mb-2 group-hover:text-gold transition-colors duration-300 line-clamp-1">
             {property.title}
           </h3>
-          <p className="text-sm text-muted-foreground font-body mb-4 line-clamp-2">
+          <div className="flex items-center gap-1.5 text-muted-foreground text-xs font-body mb-3">
+            <MapPin className="w-3 h-3 text-gold" />
+            {property.location}
+          </div>
+          <p className="text-sm text-muted-foreground font-body mb-4 line-clamp-2 flex-1">
             {property.shortDescription}
           </p>
 
-          <div className="flex items-center gap-4 text-muted-foreground text-xs font-body border-t border-border pt-4">
+          <div className="flex items-center justify-between text-muted-foreground text-xs font-body border-t border-border pt-4 mt-auto">
             <span className="flex items-center gap-1.5">
               <Maximize className="w-3.5 h-3.5" /> {property.sqm} m²
             </span>

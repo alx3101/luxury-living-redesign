@@ -86,23 +86,24 @@ export default function AboutPage() {
                 <p className="text-gold uppercase tracking-[0.3em] text-xs font-body">San Marco Real Estate</p>
               </div>
               <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-8 leading-tight">
-                5 Anni di<br />Eccellenza Immobiliare
+                Dal 2021 al Servizio<br />dell'Eccellenza Immobiliare
               </h2>
               <div className="space-y-5 text-muted-foreground font-body leading-[1.8] text-[15px]">
                 <p>
-                  San Marco Real Estate è un punto di riferimento nel mercato immobiliare di lusso
-                  sulla costa adriatica. Da oltre 5 anni, ci dedichiamo alla selezione e alla
-                  valorizzazione degli immobili più esclusivi di Lignano Sabbiadoro e delle zone limitrofe.
+                  San Marco Real Estate nasce nel 2021 con l'obiettivo di diventare un punto di riferimento
+                  nel mercato immobiliare di pregio sulla costa adriatica. Operiamo principalmente a
+                  Lignano Sabbiadoro e Bibione, selezionando e valorizzando le proprietà più esclusive del litorale friulano e veneto.
                 </p>
                 <p>
-                  La nostra missione è offrire un servizio personalizzato e di altissimo livello,
-                  accompagnando ogni cliente in un percorso unico verso la casa dei propri sogni.
-                  Ogni immobile viene analizzato nei minimi dettagli per garantire trasparenza,
-                  qualità e valore.
+                  La nostra missione è offrire un servizio personalizzato e di altissimo livello:
+                  ogni immobile viene analizzato attraverso diversi fattori di stima per valorizzare
+                  al meglio le proposte di mercato, garantendo trasparenza, qualità e valore reale
+                  in ogni fase della trattativa.
                 </p>
                 <p>
-                  Ci avvaliamo di tecnologie innovative, contenuti professionali e un team
-                  di esperti per creare un'esperienza immobiliare senza paragoni.
+                  Ci avvaliamo di video e foto professionali, storiografia dettagliata e descrizioni
+                  tecniche e architettoniche per creare un vero e proprio passaporto immobiliare,
+                  accompagnando ogni cliente con consulenza esperta durante tutto il processo di vendita.
                 </p>
               </div>
             </AnimatedSection>
@@ -133,12 +134,12 @@ export default function AboutPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { number: "01", title: "Esperienza", desc: "Oltre 5 anni di attività nel settore immobiliare di lusso con una profonda conoscenza del mercato locale." },
-              { number: "02", title: "Esclusività", desc: "Selezioniamo solo le proprietà migliori, garantendo standard qualitativi elevati per ogni proposta." },
-              { number: "03", title: "Trasparenza", desc: "Ogni aspetto tecnico, legale e architettonico viene analizzato per garantire una comprensione chiara e reale." },
+              { number: "01", title: "Valutazione", desc: "Ogni immobile può avere diversi valori a seconda del punto di vista dell'acquirente. Analizziamo ogni proprietà mediante diversi fattori di stima per valorizzare al meglio le proposte di mercato." },
+              { number: "02", title: "Contenuti", desc: "Video e foto professionali, storiografia, descrizione dei dettagli, caratteristiche tecniche e architettoniche per creare un vero passaporto immobiliare." },
+              { number: "03", title: "Consulenza", desc: "Valutiamo ogni aspetto tecnico-legale durante tutto il processo di trattativa e vendita, al servizio dei nostri clienti con dedizione e trasparenza." },
             ].map((v, i) => (
               <AnimatedSection key={v.number} delay={i * 0.15}>
-                <div className="bg-card p-10 luxury-shadow hover:-translate-y-3 transition-all duration-700 group gold-line-top">
+                <div className="bg-card p-10 luxury-shadow hover:-translate-y-3 transition-all duration-700 group gold-line-top min-h-[300px]">
                   <span className="font-display text-6xl font-bold gold-text-gradient block mb-6">{v.number}</span>
                   <h3 className="font-display text-xl font-semibold text-foreground mb-3">{v.title}</h3>
                   <p className="text-muted-foreground font-body text-sm leading-relaxed">{v.desc}</p>

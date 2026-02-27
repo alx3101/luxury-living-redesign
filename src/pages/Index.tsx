@@ -32,7 +32,7 @@ const services = [
     icon: Users,
     title: "Consulenza",
     subtitle: "Al Servizio dei Clienti",
-    description: "Un'esperienza di 5 anni volta al servizio dei propri clienti, per valutare ogni aspetto tecnico-legale durante tutto il processo di trattativa e vendita.",
+    description: "Un'esperienza pluriennale volta al servizio dei propri clienti, per valutare ogni aspetto tecnico-legale durante tutto il processo di trattativa e vendita.",
   },
 ];
 
@@ -94,7 +94,7 @@ export default function HomePage() {
     <main>
       {/* Hero */}
       <section
-        className="relative h-screen overflow-hidden"
+        className="relative h-screen overflow-hidden bg-black"
         onMouseMove={handleMouseMove}
       >
         <AnimatePresence mode="wait">
@@ -106,17 +106,21 @@ export default function HomePage() {
             transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
             className="absolute inset-0"
           >
-            <motion.img
-              src={slides[currentSlide].image}
-              alt=""
-              className="w-full h-full object-cover"
+            <motion.div
+              className="absolute inset-[-20px]"
               style={{ x: imgX, y: imgY }}
-            />
+            >
+              <img
+                src={slides[currentSlide].image}
+                alt=""
+                className="w-full h-full object-cover"
+              />
+            </motion.div>
             <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/20 to-black/70" />
           </motion.div>
         </AnimatePresence>
 
-        <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-6">
+        <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-6 bg-black/25">
           <motion.div
             key={`text-${currentSlide}`}
             initial={{ opacity: 0 }}
@@ -291,7 +295,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {services.map((s, i) => (
               <AnimatedSection key={s.title} delay={i * 0.15}>
-                <div className="bg-card p-10 group hover:-translate-y-3 transition-all duration-700 relative overflow-hidden gold-line-top shimmer">
+                <div className="bg-card p-10 group hover:-translate-y-3 transition-all duration-700 relative overflow-hidden gold-line-top shimmer min-h-[372px]">
                   <div className="relative z-10">
                     <div className="w-14 h-14 mb-8 flex items-center justify-center border border-gold/30 group-hover:border-gold group-hover:bg-gold/5 transition-all duration-500">
                       <s.icon className="w-6 h-6 text-gold" />

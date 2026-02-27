@@ -25,8 +25,8 @@ export default function Footer() {
               />
             </Link>
             <p className="text-white/40 text-sm leading-relaxed font-body">
-              Il nostro impegno, la vostra soddisfazione. Da oltre 5 anni al servizio
-              dell'eccellenza immobiliare.
+              Agenzia immobiliare specializzata in proprietà di pregio a Lignano Sabbiadoro
+              e Bibione. Dal 2021 al servizio dell'eccellenza immobiliare.
             </p>
             <div className="flex gap-3 mt-6">
               {[
